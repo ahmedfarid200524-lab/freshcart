@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+    --main-green--:#16A34A;
+    --light-green--:#F0FDF4;
+}
+.bg-theme{
+    background-color: #16A34A;
+}
+.bg-lightgreen{
+    background-color: var(--light-green--);
+
+}
+.bg-brand{
+   background-color:#F3F4F6 ;
+   color: #64696e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.mainslider {
+    background-image: url(./../../public/images/homeslider.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.swiper {
+  --swiper-theme-color: #ffffff;              
+  --swiper-navigation-size: 28px;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+.sign{
+    height: 30px;
+    width: 12px;
+    border-radius: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.prod-det-img{
+    position:static;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+   
+}
+@media screen and (min-width:900px) {
+    .prod-det-img{
+    position: sticky;
+    top: 0px;
+    margin-bottom: 0px;
+    bottom: 1000px;
+}
 }

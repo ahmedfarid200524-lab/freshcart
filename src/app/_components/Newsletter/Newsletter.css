@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap");
+
+.nl-card {
+  --green: #059669;
+  --green-2: #10b981;
+  font-family: "Exo 2", system-ui, sans-serif;
+  max-width: 1470px;
+  margin-bottom: 20px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1px 491px;
+  gap: 32px;
+  padding: 56px;
+  border-radius: 48px;
+  border: 1px solid #d9f5e8;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f8fffc 50%, #ffffff 100%);
+  box-shadow: 0 30px 80px -30px rgba(16, 185, 129, 0.25);
+  color: #111827;
+  box-sizing: border-box;
+}
+.nl-card *, .nl-card *::before, .nl-card *::after { box-sizing: border-box; }
+
+/* left */
+.nl-head { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.nl-icon {
+  width: 56px; height: 56px; border-radius: 18px;
+  display: grid; place-items: center; color: #fff;
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 10px 24px -8px rgba(5, 150, 105, 0.6);
+}
+.nl-label { color: var(--green); font-weight: 600; font-size: 14px; letter-spacing: 0.03em; }
+.nl-sub { color: #6b7280; font-size: 12.5px; }
+
+.nl-title { margin: 0 0 18px; font-size: 36px; line-height: 1.15; font-weight: 700; color: #0f172a; }
+.nl-title span { color: var(--green); }
+.nl-desc { margin: 0 0 26px; font-size: 18px; color: #6b7280; }
+
+.nl-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.nl-chip {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 18px 8px 8px; border-radius: 999px;
+  background: #fff; border: 1.5px solid #d1f5e4;
+  box-shadow: 0 3px 8px rgba(16, 185, 129, 0.12);
+  font-size: 14px; font-weight: 500; color: #374151;
+}
+.nl-chip-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: #d1fae5; color: var(--green);
+}
+
+.nl-form { display: flex; gap: 14px; }
+.nl-form input {
+  flex: 1; height: 60px; padding: 0 22px; font: inherit; font-size: 17px;
+  border-radius: 18px; border: 2px solid #e5e7eb; background: #fff; color: #111827;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.nl-form input::placeholder { color: #9ca3af; }
+.nl-form input:focus { border-color: var(--green-2); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.18); }
+.nl-form button {
+  height: 60px; padding: 0 32px; display: inline-flex; align-items: center; gap: 10px;
+  font: inherit; font-size: 17px; font-weight: 600; color: #fff; cursor: pointer;
+  border: 0; border-radius: 18px;
+  background: linear-gradient(135deg, #059669, #10b981);
+  box-shadow: 0 12px 24px -8px rgba(5, 150, 105, 0.55);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.nl-form button:hover { transform: translateY(-2px); box-shadow: 0 16px 28px -8px rgba(5, 150, 105, 0.65); }
+.nl-note { margin: 14px 0 0 6px; font-size: 12.5px; color: #6b7280; }
+
+.nl-divider { background: #e5ebe8; }
+
+/* right */
+.nl-app {
+  position: relative; overflow: hidden;
+  padding: 32px; border-radius: 28px; color: #fff;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.22), transparent 45%),
+    #131b2b;
+}
+.nl-badge {
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.03em; color: #34d399;
+  background: rgba(16, 185, 129, 0.14); border: 1px solid rgba(16, 185, 129, 0.35);
+}
+.nl-app h3 { margin: 20px 0 14px; font-size: 24px; font-weight: 700; }
+.nl-app p { margin: 0 0 28px; font-size: 14.5px; color: #94a3b8; }
+
+.nl-store {
+  display: flex; align-items: center; gap: 14px;
+  padding: 0 20px; height: 58px; margin-bottom: 12px;
+  border-radius: 14px; text-decoration: none; color: #fff;
+  background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: background 0.2s, transform 0.15s;
+}
+.nl-store:hover { background: rgba(255, 255, 255, 0.16); transform: translateY(-1px); }
+.nl-store span { display: flex; flex-direction: column; line-height: 1.2; }
+.nl-store small { font-size: 10.5px; color: #9ca3af; letter-spacing: 0.04em; }
+.nl-store strong { font-size: 16px; font-weight: 600; }
+
+.nl-rating { margin-top: 24px; font-size: 14px; color: #94a3b8; }
+.nl-rating .stars { color: #fbbf24; letter-spacing: 1px; margin-right: 6px; }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .nl-card { grid-template-columns: 1fr; padding: 32px; border-radius: 32px; }
+  .nl-divider { display: none; }
+}
+@media (max-width: 560px) {
+  .nl-title { font-size: 28px; }
+  .nl-form { flex-direction: column; }
+  .nl-form button { justify-content: center; }
+}
