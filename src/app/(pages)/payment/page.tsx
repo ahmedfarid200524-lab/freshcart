@@ -15,9 +15,9 @@ const router =useRouter()
   const {CartId , Afterpayment,carttotalprice,toatalcartitem,product}=useContext(cartCtontext)
 
 
-  const city =useRef("")
-  const address =useRef("")
-  const phone =useRef("")
+  const city =useRef<HTMLInputElement>(null)
+  const address =useRef<HTMLTextAreaElement>(null)
+  const phone =useRef<HTMLInputElement>(null)
 
   const FREE_SHIPPING_FROM = 500
 const SHIPPING_FEE = 50
@@ -35,9 +35,9 @@ async function cashpayment(){
 
     const values ={
         shippingAddress: {
-    details: address.current.value,
-    phone: phone.current.value,
-    city: city.current.value,
+    details: address.current!.value,
+    phone: phone.current!.value,
+    city: city.current!.value,
    
   }
     }
@@ -62,9 +62,9 @@ async function onlinePayment(){
 
     const values ={
         shippingAddress: {
-    details: address.current.value,
-    phone: phone.current.value,
-    city: city.current.value,
+    details: address.current!.value,
+    phone: phone.current!.value,
+    city: city.current!.value,
    
   }
     }
@@ -314,7 +314,8 @@ async function onlinePayment(){
               {/* Item */}
               <div className='overflow-y-scroll h-28'>
 
-             {product?.map((item) => (
+             {// eslint-disable-next-line @typescript-eslint/no-explicit-any
+             product?.map((item: any) => (
   <div
     key={item.product.id}
     className="flex items-center justify-between bg-gray-50 rounded-xl p-3 mb-3"

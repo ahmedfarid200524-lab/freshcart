@@ -10,7 +10,7 @@ import { jwtDecode } from "jwt-decode"
 
      const token = await getmytoken()
 
-     const {id} = jwtDecode(token)
+     const {id} = jwtDecode<{id: string}>(token as string)
 
     const {data} = await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${id}`)
 

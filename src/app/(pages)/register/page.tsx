@@ -26,15 +26,16 @@ const form =useForm<RegesterSchemaType>({
     resolver:zodResolver(RegesterSchema)
 })
 
-async function signup(values){
+async function signup(values: RegesterSchemaType){
    try {
    const { data } = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signup",values)
    toast.success(data.message)
   router.push("/login")
 
    } catch (e) {
-    toast.success(e.response?.data?.message ?? "Something went wrong")
-    console.log(e.response?.data?.message );
+    const err = e as { response?: { data?: { message?: string } } }
+    toast.success(err.response?.data?.message ?? "Something went wrong")
+    console.log(err.response?.data?.message );
     
    }
     

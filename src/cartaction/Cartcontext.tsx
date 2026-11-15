@@ -9,17 +9,20 @@ import { addtowishlistAction, deletewishlistAction, GetuserwislistAction } from 
 
 
 
-export const cartCtontext =createContext({})
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const cartCtontext =createContext<any>({})
 
 const CartcontextProvider = ({children} : {children:React.ReactNode}) => {
-  const [product,setProduct] = useState([])
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [product,setProduct] = useState<any[]>([])
   const [carttotalprice,setcarttotal] = useState(0)
   const [toatalcartitem,setcartitem] = useState(0)
   const [CartId,SetCartid] = useState("")
 
 
   //wishlist
-   const [wish,setwish] = useState([])
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   const [wish,setwish] = useState<any[]>([])
 
 async function getwishlist(){
     try {
@@ -60,7 +63,8 @@ async function addtowishlist(id:string){
 async function deletetowishlist(id: string) {
   try {
     const data = await deletewishlistAction(id)
-    setwish((prev: any[]) => prev.filter((item) => item.id !== id))
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    setwish((prev: any[]) => prev.filter((item: any) => item.id !== id))
     return data
   } catch (error) {
     console.log(error)

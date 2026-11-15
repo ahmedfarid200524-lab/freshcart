@@ -1,8 +1,9 @@
 "use client"
 import { useState } from "react";
 import "./Newsletter.css";
+import type React from "react";
 
-const Icon = ({ children, size = 16, ...p }) => (
+const Icon = ({ children, size = 16, ...p }: React.SVGProps<SVGSVGElement> & { size?: number }) => (
   <svg
     width={size}
     height={size}
@@ -71,7 +72,7 @@ export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
     // TODO: send `email` to your API

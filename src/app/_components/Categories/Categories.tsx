@@ -1,5 +1,6 @@
 import { GetAllCat } from '@/apis/Categories';
 import React from 'react'
+import { Category } from '@/types/products.t'
 
 
 const Categories = async () => {

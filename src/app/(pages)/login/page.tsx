@@ -39,7 +39,7 @@ async function login(values: LoginSchemaType) {
   callbackUrl:"/"
  })
  console.log(res);
- if (res.ok=== true){
+ if (res?.ok=== true){
    toast.success("login success",{
     position:"top-center"
    });

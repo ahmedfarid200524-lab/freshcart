@@ -8,7 +8,7 @@ import QuantitySelector from '@/app/_components/quantityselector/QuantitySelecto
 import { Product } from '@/types/products.t';
 
 
-const Productdetails = async ({params}) => {
+const Productdetails = async ({params}: {params: Promise<{id: string}>}) => {
     
   const {id} :{id:string} = await params
 const data :Product = await getSingleProducts(id)

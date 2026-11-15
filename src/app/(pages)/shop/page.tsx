@@ -39,7 +39,7 @@ const Shop = async () => {
     <p className='mb-3 text-gray-500'>Showing 40 products</p>
      <div className="grid md:grid-cols-5 gap-5 md:w-[100%] grid-cols-1">
       
-  {data?.map((product:product , idx:number) => (
+  {data?.map((product:Product , idx:number) => (
     <Prodcard product={product} key={idx}/>
    
   ))}
