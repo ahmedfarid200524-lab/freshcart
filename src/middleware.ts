@@ -15,5 +15,5 @@ if(!token){
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/cart" ,"/wishlist","/profile","/Payment"],
+  matcher: ["/cart" ,"/wishlist","/profile","/payment"],
 }
