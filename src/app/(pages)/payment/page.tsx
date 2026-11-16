@@ -48,7 +48,7 @@ async function cashpayment(){
 
 
         Afterpayment()
-        router.push("/Allorders")
+        router.push("/allorders")
       console.log(data);
       
     } catch (error) {

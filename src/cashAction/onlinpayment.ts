@@ -10,7 +10,7 @@ import axios from "axios"
      const token = await getmytoken()
 
 
-    const {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartid}?url=http://localhost:3000`,values, {
+    const {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartid}?url=https://freshcart-blond-zeta.vercel.app`,values, {
         headers:{
             token: token as string,
              

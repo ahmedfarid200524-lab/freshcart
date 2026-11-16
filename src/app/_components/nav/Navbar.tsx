@@ -311,7 +311,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
                       </Link>
 
                       <Link
-                        href="/Allorders"
+                        href="/allorders"
                         onClick={() => setMenuOpen(false)}
                         className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-600"
                       >
@@ -506,7 +506,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
                       My Profile
                     </Link>
                     <Link
-                      href="/Allorders"
+                      href="/allorders"
                       onClick={() => setMobileOpen(false)}
                       className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-600"
                     >
